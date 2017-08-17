@@ -1,7 +1,6 @@
-<br><br><div class="container-fluid">
 
   <div class="col-md-6 col-md-offset-3 well">
-    <%= form_tag '/login' do %>
+    <%= form_tag '/signup' do %>
     <div class="form-group">
       <%= label_tag :email %>
       <%= text_field_tag :email, nil, class:'form-control'%>
@@ -10,15 +9,13 @@
       <%= label_tag :password %>
       <%= password_field_tag :password, nil, class:'form-control'%>
     </div>
-    <%= submit_tag 'log in', class: 'btn btn-success' %>
+    <%= submit_tag 'sign up', class: 'btn btn-info' %>
     <%end%>
   </div>
-</div>
+
 
   <div class="container">
     <% flash.each do |type, message| %>
     <div class="alert alert-<%= type %>"><%= message %></div>
     <%end%>
   </div>
-
-  
