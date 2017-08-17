@@ -14,6 +14,9 @@ def create
   end
 end
 
+ def logout
+ end
+
 def destroy
   session[:user_id] = nil
   flash[:success] = " see you again "
