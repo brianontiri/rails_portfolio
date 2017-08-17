@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- Favicon-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>BrianOntiri - Kenyariri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author"  content="ontiri's website">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <%= csrf_meta_tags %>
+    <!-- Stylesheets -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+  <div class="container">
+    <% flash.each do |type, message| %>
+    <div class="alert alert-<%= type %>"><%= message %></div>
+    <%end%>
+    </div
+
+    <%= render 'pages/nav' %>
+    <div class="container">
+    <%= yield %>
+    </div>
+
+    <%= render 'pages/footer'%>
+
+
+
+
+  </body>
+
+</html>
