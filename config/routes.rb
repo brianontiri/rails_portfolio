@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'sessions/new'
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
 get 'work' => 'pages#work'
 get 'about' => 'pages#about'
