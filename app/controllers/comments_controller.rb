@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 before_action :find_post
+before_action :find_comment
 
 def create
   @comment = @post.comments.create(params[:comment].permit(:content))
