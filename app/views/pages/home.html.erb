@@ -26,6 +26,7 @@
   <body>
 
 	<!-- +++++ Welcome Section +++++ -->
+  <% if !logged_in? %>
 	<div id="ww">
 	    <div class="container">
 			<div class="row">
@@ -43,7 +44,7 @@
 	    </div> <!-- /container -->
 	</div><!-- /ww -->
 
-
+  <%else%>
 	<!-- +++++ Projects Section +++++ -->
 
       <h1 style="text-align:center;"> Latest Projects</h1>
@@ -85,7 +86,7 @@
 			</div>
 		</div><!-- /row -->
 	</div><!-- /container -->
-
+  <%end%>
 
 	<!-- +++++ Footer Section +++++ -->
 

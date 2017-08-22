@@ -13,6 +13,7 @@ gem 'rails', '~> 5.1.3'
 
 # for jquery
 gem 'jquery-rails'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git" 
 
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
