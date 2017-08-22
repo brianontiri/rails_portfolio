@@ -16,7 +16,7 @@ source 'https://rubygems.org'
   gem 'mini_magick', '~> 4.3'
   gem 'stripe'
   gem 'remotipart'
-  
+
   group :development, :test do
     gem 'byebug', platform: :mri
     gem 'rspec-rails'
