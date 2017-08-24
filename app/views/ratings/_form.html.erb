@@ -1,0 +1,17 @@
+<%= form_for([@project, @project.ratings.build]) do |f| %>
+<p>
+  <%= f.lable :vote %>
+</p>
+<p>
+<%= f.lable :content %><br>
+<%= f.text_area :content %>
+
+</p>
+
+<p>
+<%= f.lable :vote %><br>
+<%= f.text_area :vote %>
+
+</p>
+
+  <%end%>
