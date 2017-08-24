@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>My Blog</h1>
+<% if current_user.admin? %>
   <td><%= link_to 'Post', new_post_path, class:'btn btn-warning' %></td>
+  <% end %>
 <table class="table">
   <thead>
     <tr>
@@ -22,10 +24,10 @@
         <td><%= post.created_at.to_date %></td>
 
         <td><%= link_to 'Show', post, class:'btn btn-success' %></td>
-
+        <% if current_user.admin? %>
           <td><%= link_to 'Edit', edit_post_path(post),class:'btn btn-info' %></td>
         <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' },  class:'btn btn-danger'%></td>
-
+        <% end %>
       </tr>
     <%end%>
   </tbody>
