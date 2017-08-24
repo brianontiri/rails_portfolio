@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style="text-align:center;">My skills</h1>
+<% if current_user.admin? %>
+<%= link_to 'Skill', new_skill_path, class:'btn btn-warning' %>
+  <% end %>
+
+
+
+        <div class="container-fluid">
+            <% @projects.each do |project| %>
+          <%= skill.name %>
+            <%= skill.description %>
+              <%= skill.projects %>
+
+        <%= link_to 'skill-description', skill, class:'btn btn-success' %>
+        <% if current_user.admin? %>
+          <%= link_to 'Edit', edit_skill_path(skill),class:'btn btn-info' %>
+        <%= link_to 'Delete', skill, method: :delete, data: { confirm: 'Are you sure?' },  class:'btn btn-danger'%>
+        <% end %>
+      </tr>
+    <%end%>
+  </div>
