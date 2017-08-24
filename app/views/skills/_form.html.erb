@@ -1,4 +1,4 @@
-<%= form_for Project.new do |form| %>
+<%= form_for Skill.new do |form| %>
 
 
   <div class="field form-group">
@@ -8,7 +8,7 @@
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :skill_description %>
+    <%= form.text_field :description, id: :skill_description,  class:'form-control' %>
   </div>
 
   <div class="field">

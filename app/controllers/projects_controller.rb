@@ -43,7 +43,7 @@
     # PATCH/PUT /posts/1.json
     def update
       respond_to do |format|
-        if @project.update(post_params)
+        if @project.update(project_params)
           format.html { redirect_to @project, notice: 'Project was successfully updated.' }
           format.json { render :show, status: :ok, location: @project }
         else
