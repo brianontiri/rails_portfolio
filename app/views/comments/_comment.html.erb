@@ -2,7 +2,9 @@
 
 <p><%=comment.content %><?p>
 
+ <%if comment.user == current_user%>
  <%= link_to  "Delete comment", [comment.post, comment], method: :delete %>
+ <%end%>
 <% end %>
 <div class="comments">
 </div>
