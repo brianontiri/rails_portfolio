@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'sessions/new'
-
+  resources :skills
   resources :posts do
     resources :comments
   end
