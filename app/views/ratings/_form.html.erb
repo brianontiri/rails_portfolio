@@ -1,17 +1,16 @@
-<%= form_for([@project, @project.ratings.build]) do |f| %>
-<p>
-  <%= f.lable :vote %>
-</p>
-<p>
-<%= f.lable :content %><br>
-<%= f.text_area :content %>
+<%= form_for([@project,@project.ratings.build]) do |f| %>
+<P>
+  <%= f.label :name %>
+  <%= f.text_field :name, class:'form-control' %>
+</P>
 
-</p>
+<P>
+  <%= f.label :content %>
+  <%= f.text_area :body, class:'form-control' %>
+</P>
 
-<p>
-<%= f.lable :vote %><br>
-<%= f.text_area :vote %>
+<P>
 
-</p>
-
-  <%end%>
+  <%= f.submit %>
+</P>
+<% end %>

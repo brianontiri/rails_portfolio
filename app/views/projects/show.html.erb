@@ -19,8 +19,15 @@
   <strong>Description:</strong>
   <%= @project.description %>
 </p>
+<div>
+  <br>
 
- <%#= render 'comments/comment' %>
+<h2> <%= @project.ratings.count %> ratings </h2>
+  <%= render @project.ratings %>
+   <h3> Add a rating: </h3>
+ <%= render 'ratings/form' %>
+ <br>
+ </di>
   <% if current_user.admin? %>
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'New', new_project_path(@project) %> |

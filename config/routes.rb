@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   resources :projects do
     resources :ratings
   end
-  resources :skills
 
 get 'work' => 'pages#work'
 get 'about' => 'pages#about'
