@@ -2,6 +2,7 @@
 
 
   <div class="field form-group">
+    <div class="field">
     <%= form.label :Name  %>
     <%= form.text_field :name, id: :skill_name , class:'form-control'%>
   </div>
@@ -14,10 +15,10 @@
   <div class="field">
     <%= form.label :project_used %>
     <%= form.text_area :projects, id: :skill_project, class:'form-control' %>
-  </div>
- </div><br>
+  </div><br>
 
   <div class="actions form-group">
     <%= form.submit 'Add skill' ,class:'btn btn-success' %>
   </div>
+</div>
 <% end %>
