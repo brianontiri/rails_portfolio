@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170825054117) do
+ActiveRecord::Schema.define(version: 20170828192410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,15 @@ ActiveRecord::Schema.define(version: 20170825054117) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_ratings_on_project_id", using: :btree
+  end
+
+  create_table "references", force: :cascade do |t|
+    t.string   "name"
+    t.text     "location"
+    t.integer  "contact"
+    t.text     "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sign_ups", id: :bigserial, force: :cascade do |t|
