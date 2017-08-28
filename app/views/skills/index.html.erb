@@ -10,7 +10,7 @@
 
 
 
-   <div class="container pt">
+
      <div class="row mt">
        <div class="col-lg-6 col-lg-offset-3 centered">
          <h3>MY skills</h3>
@@ -18,12 +18,14 @@
 
        </div>
      </div>
-     <div class="row mt centered">
-       <div class="col-lg-4">
-         <% @skills.each do |skill| %>
-      <h2>  <%= skill.name %></h2>
-       </div>
-       <div class="col-lg-4">
+
+     <!-- <div class="container-fluid">
+       <div class="row">
+       <div class="col-lg-4"> -->
+      <% @skills.each do |skill| %>
+      <h2> <%= skill.name %></h2>
+       <!-- </div>
+       <div class="col-lg-4"> -->
          <%= link_to 'skill-description', skill, class:'btn btn-success' %>
          <% if current_user.admin? %>
            <%= link_to 'Edit', edit_skill_path(skill),class:'btn btn-info' %>
@@ -31,11 +33,12 @@
          <% end %>
        </tr>
      <%end%>
-       </div>
-       <div class="col-lg-4">
-       <p><a href="http://github.com/brianontiri">Brian Ontiri</a>.</p>
-       </div>
+       <!-- </div>
+       <div class="col-lg-4"> -->
+       <p style="text-align:center;"><a href="http://github.com/brianontiri">@Brian Ontiri</a>.</p>
+       <!-- </div>
      </div>
+   </div> -->
      <!-- <div class="row mt centered">
        <div class="col-lg-4">
          <a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port04.jpg" alt="" /></a>
