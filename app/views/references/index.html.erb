@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<!-- <h1 style="text-align:center;">My skills</h1> -->
+
+<%= link_to 'Refere me', new_reference_path, class:'btn btn-warning' %>
+
+
+
+
+
+
+
+
+     <!-- <div class="row mt">
+       <div class="col-lg-6 col-lg-offset-3 centered">
+         <h3>MY skills</h3>
+         <hr>
+
+       </div>
+     </div> -->
+
+     <!-- <div class="container-fluid">
+       <div class="row">
+       <div class="col-lg-4"> -->
+      <% @references.each do |reference| %>
+      <h2> <%= reference.name %></h2>
+       <!-- </div>
+       <div class="col-lg-4"> -->
+         <%= link_to 'referal-details', reference, class:'btn btn-success' %>
+
+           <%= link_to 'Edit', edit_reference_path(reference),class:'btn btn-info' %>
+         <%= link_to 'Delete', reference, method: :delete, data: { confirm: 'Are you sure?' },  class:'btn btn-danger'%>
+
+       </tr>
+     <%end%>
+       <!-- </div>
+       <div class="col-lg-4"> -->
+       <p style="text-align:center;"><a href="http://github.com/brianontiri">@Brian Ontiri</a>.</p>
+       <!-- </div>
+     </div>
+   </div> -->
+     <!-- <div class="row mt centered">
+       <div class="col-lg-4">
+         <a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port04.jpg" alt="" /></a>
+         <p>Movie.Net</p>
+       </div>
+       <div class="col-lg-4">
+         <a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port05.jpg" alt="" /></a>
+         <p>King-Lost</p>
+       </div>
+       <div class="col-lg-4">
+         <a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port06.jpg" alt="" /></a>
+         <p>Chiefs-Resipe</p>
+       </div>
+     </div> -->
+   </div>
