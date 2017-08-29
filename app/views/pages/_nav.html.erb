@@ -16,6 +16,7 @@
            <% if !logged_in? %>
               <li class="nav-item"><%= link_to 'Log-in', login_path %></li>
                 <li class="nav-item"><%= link_to 'Sign-up', signup_path %></li>
+                  <li class="nav-item"><%= link_to 'Reference',references_path %></li>
               <%else%>
                 <li> you are logged in as <%= current_user.email %></li>
             <li class="nav-item"><%= link_to 'Home',home_path %></li>
@@ -24,7 +25,7 @@
            <li class="nav-item"><%= link_to 'Work',work_path %></li>
            <li class="nav-item"><%= link_to 'Blog',posts_path %></li>
             <li class="nav-item"><%= link_to 'Projects',projects_path %></li>
-            <li class="nav-item"><%= link_to 'Reference',references_path %></li>
+            <!-- <li class="nav-item"><%= link_to 'Reference',references_path %></li> -->
             <li class="nav-item"><%= link_to 'Skills',skills_path %></li>
 
            <li class="nav-item"><%= link_to 'Contact',contact_path %></li>
